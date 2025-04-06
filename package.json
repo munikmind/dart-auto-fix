@@ -1,5 +1,5 @@
 {
-  "name": "munikmind",
+  "name": "dart-auto-fix",
   "displayName": "dart-auto-fix",
   "description": "",
   "version": "0.0.1",
@@ -9,12 +9,14 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "munikmind.helloWorld",
+        "command": "dart-auto-fix.helloWorld",
         "title": "Hello World"
       }
     ]
@@ -34,16 +36,18 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.99.0",
     "@types/mocha": "^10.0.10",
-    "@types/node": "20.x",
+    "@types/node": "^20.17.30",
+    "@types/vscode": "^1.99.0",
     "@typescript-eslint/eslint-plugin": "^8.28.0",
     "@typescript-eslint/parser": "^8.28.0",
-    "eslint": "^9.23.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
     "esbuild": "^0.25.1",
+    "eslint": "^9.23.0",
+    "mocha": "^11.1.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.8.2",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "vscode": "^1.1.37"
   }
 }
